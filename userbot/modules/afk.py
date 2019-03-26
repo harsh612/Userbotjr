@@ -52,17 +52,17 @@ async def afk_on_pm(e):
         if ISAFK:
             if e.sender_id not in USERS:
                 await e.reply(
-                    "Sorry! My boss is Offline due to ```"
+                    "abhi wo nhi hai baadme aa kyuki wo ```"
                     + AFKREASON
-                    + "``` I'll ping him to look into the message soon😉"
+                    + "``` me usko bata dunga tu aaya tha"
                 )
                 USERS.update({e.sender_id: 1})
                 COUNT_MSG = COUNT_MSG + 1
             elif e.sender_id in USERS:
-                if USERS[e.sender_id] % 5 == 0:
+                if USERS[e.sender_id] % 4 == 0:
                     await e.reply(
-                        "Sorry! But my boss is still not here. "
-                        "Try to ping him a little later. I am sorry😖."
+                        "ek baar bola na nhi hai wo abhi. "
+                        "baadme try kar. jaatu bhag."
                         "He told me he was busy because of  ```"
                         + AFKREASON
                         + "```"
