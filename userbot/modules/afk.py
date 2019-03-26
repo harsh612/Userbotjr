@@ -21,16 +21,16 @@ async def mention_afk(e):
         if ISAFK:
             if e.sender_id not in USERS:
                 await e.reply(
-                    "Sorry! My boss is Offline due to ```"
+                    "Sorry! gaandu he is Offline due to ```"
                     + AFKREASON
-                    + "```. Would ping him to look into the message soon😉"
+                    + "```. kardunga pin baadme abhi wo offline hai me uska bot"
                 )
                 USERS.update({e.sender_id: 1})
                 COUNT_MSG = COUNT_MSG + 1
             elif e.sender_id in USERS:
                 if USERS[e.sender_id] % 5 == 0:
                     await e.reply(
-                        "Sorry! But my boss is still not here. "
+                        "Sorry! maachuda. "
                         "Try to ping him a little later. I am sorry😖."
                         "He told me he was busy with ```"
                         + AFKREASON
